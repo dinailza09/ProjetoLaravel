@@ -20,7 +20,18 @@ class ProdutosController extends Controller
         $novo_produto =  $request->all();
         Produto::create($novo_produto);
 
-        return redirect('produtos');
+        return redirect()->route('produtos');
      }
 
+     public function update(ProdutoRequest $request, $id){
+      Produto::find($id)->update($request->all());
+      return redirect()->route('produtos');   }
+
+     public function destroy($id){
+     Produto::find($id)->delete();
+     return redirect()->route('produtos');   }
+
+      public function edit($id){
+      $produto = Produto::find($id);
+      return view('produtos.edit', compact ('produto'));   }
 }

@@ -27,6 +27,12 @@ Route::get('/produtos', [App\Http\Controllers\ProdutosController::class, 'index'
 Route::get('/produtos/create', [App\Http\Controllers\ProdutosController::class, 'create']);
 
 Route::post('/produtos/store', [App\Http\Controllers\ProdutosController::class, 'store']);
+
+Route::put('produtos/{id}/update', [App\Http\Controllers\ProdutosController::class, 'update']);
+
+Route::get('produtos/edit/{id}', [App\Http\Controllers\ProdutosController::class, 'edit']);
+
+Route::get('produtos/destroy/{id}', [App\Http\Controllers\ProdutosController::class, 'destroy']);
 });
 
 

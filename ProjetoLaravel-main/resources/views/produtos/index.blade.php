@@ -24,10 +24,14 @@
 <td>{{$produto->descricao }}</td>
 <td>{{$produto->quantidade }}</td>
 <td>{{$produto->valor }}</td>
+<td>
+    <a href="{{url('produtos/edit', ['id'=>$produto->id])}}" class="btn-sm btn-success">Editar</a>
+    <a href="{{url('produtos/destroy', ['id'=>$produto->id])}}" class="btn-sm btn-danger">Remover</a>
 </tr>
+
 @endforeach
 </tbody>
-</table>
+</table><a href="{{ url('produtos/create', []) }}" class="btn btn-info">Adicionar</a>    
 @stop
 
 @section('css')
