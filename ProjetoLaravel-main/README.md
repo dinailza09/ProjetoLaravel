@@ -25,6 +25,7 @@ Configurando o Banco de Dados<br>
 Mudaremos	o	.env adicionando	as	configurações	do	banco	de	dados	de	nossa	aplicação.<br>
 
 Vamos	apenas	criar	o	banco	de	dados	(projeto)	no	nosso	SGBD.<br> 
+Comando->php artisan migrate
 
 Por fim, dar o comando pra subir o projeto no servidor <br>
 php artisan serve
