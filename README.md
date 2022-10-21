@@ -1,19 +1,22 @@
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<h1>Sistema web, voltado para controle de PetShop.</h1><br>
+<h3>Sistema web, voltado para controle de PetShop.</h3>
 
-> :construction: Projeto em construção :construction:
+<h4> 
+    :construction:  Projeto em construção  :construction:
+</h4>
 
-<h3>Requisitos</h3>
--Composer <br>
--Node JS <br>
--PHP <br>  
+<h4>✔️ Tecnologias utilizadas</h4>
+
+- ``Composer``
+- ``Node JS``
+- ``PHP``
 
 <h4>Todos instalados corretamente, podemos clonar o projeto. <h4>
-<h3>Comandos para instalação</h3>
-
+<h4> 📁 Acesso ao projeto</h4>
  Clonar todos os arquivos do repositório<br>
+ 
 ```git clone``` 
 
 Executar o comando<br>
@@ -32,7 +35,9 @@ Mudaremos	o	.env adicionando	as	configurações	do	banco	de	dados	de	nossa	aplic
 Vamos	apenas	criar	o	banco	de	dados	(projeto)	no	nosso	SGBD.<br> 
 ◦ Execute	o	comando	de	execução	de	migrations->```php artisan migrate```
 
+<h4> 🛠️ Rodar o projeto<br></h4>
 Por fim, dar o comando pra subir o projeto no servidor <br>
+ 
 ```php artisan serve```
 
 
