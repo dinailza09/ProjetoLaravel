@@ -1,6 +1,10 @@
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
+<h1>Sistema web, voltado para controle de PetShop.</h1><br>
+
+>Status do projeto: Em andamento
+
 <h3>Requisitos</h3>
 -Composer <br>
 -Node JS <br>
@@ -21,8 +25,6 @@ Agora, vamos	copiar	o	arquivo<br>
 
 Próximo passo gerar a chave de aplicação<br>
 ```php artisan key:generate```<br>
-
-Vamos desenvolver um sistema web, voltado para controle de PetShop.<br>
 
 Configurando o Banco de Dados<br>
 Mudaremos	o	.env adicionando	as	configurações	do	banco	de	dados	de	nossa	aplicação.<br>
