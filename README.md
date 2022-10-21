@@ -3,7 +3,7 @@
 
 <h1>Sistema web, voltado para controle de PetShop.</h1><br>
 
->Status do projeto: Em andamento
+> :construction: Projeto em construção :construction:
 
 <h3>Requisitos</h3>
 -Composer <br>
