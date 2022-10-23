@@ -29,9 +29,9 @@
         {!! Form::text('valor', null, ['class'=>'form-control', 'required']) !!}
         </div>
         <div class="form-group">
-        {!! Form::submit('Criar Produto', ['class'=>'btn btn-primary']) !!}
+        {!! Form::submit('Criar Produto', ['class' => 'btn btn-primary']) !!}
         {!! Form::reset('Limpar', ['class'=>'btn btn-default']) !!}
-        </div>
-
+        {!! Form::button('Voltar', ['class' => 'btn btn-default', 'onclick' => 'window.history.back()']) !!}
+    </div>
 {!! Form::close() !!}
 @stop

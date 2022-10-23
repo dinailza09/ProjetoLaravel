@@ -28,10 +28,12 @@
         {!! Form::label('valor', 'Preço') !!}
         {!! Form::text('valor', $produto->valor, ['class'=>'form-control', 'required']) !!}
         </div>
+
         <div class="form-group">
-        {!! Form::submit('Editar Produto', ['class'=>'btn btn-primary']) !!}
-        {!! Form::reset('Limpar', ['class'=>'btn btn-default']) !!}
-        </div>
+        {!! Form::submit('Editar Produto', ['class' => 'btn btn-primary']) !!}
+        {!! Form::reset('Limpar', ['class' => 'btn btn-default']) !!}
+        {!! Form::button('Voltar', ['class' => 'btn btn-default', 'onclick' => 'window.history.back()']) !!}
+    </div>
 
 {!! Form::close() !!}
 @stop

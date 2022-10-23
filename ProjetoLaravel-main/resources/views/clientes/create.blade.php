@@ -34,7 +34,8 @@
         <div class="form-group">
         {!! Form::submit('Criar Cliente', ['class'=>'btn btn-primary']) !!}
         {!! Form::reset('Limpar', ['class'=>'btn btn-default']) !!}
-        </div>
+        {!! Form::button('Voltar', ['class' => 'btn btn-default', 'onclick' => 'window.history.back()']) !!}
+    </div>
 
 {!! Form::close() !!}
 @stop
