@@ -25,13 +25,13 @@
 <td>{{$produto->quantidade }}</td>
 <td>{{$produto->valor }}</td>
 <td>
-    <a href="{{url('produtos/edit', ['id'=>$produto->id])}}" class="btn-sm btn-success">Editar</a>
-    <a href="{{url('produtos/destroy', ['id'=>$produto->id])}}" class="btn-sm btn-danger">Remover</a>
+    <a href="{{ route('produtos.edit', ['id'=>$produto->id])}}" class="btn-sm btn-success">Editar</a>
+    <a href="{{route('produtos.destroy', ['id'=>$produto->id])}}" onclick="return ConfirmaExclusao({{ $produto->id }})" class="btn-sm btn-danger">Remover</a>
 </tr>
 
 @endforeach
 </tbody>
-</table><a href="{{ url('produtos/create', []) }}" class="btn btn-info">Adicionar</a>    
+</table><a href="{{ route('produtos.create', []) }}" class="btn btn-info">Adicionar</a>    
 @stop
 
 @section('css')
@@ -41,6 +41,3 @@
 @section('js')
 <script> console.log('Hi!');</script>
 @stop
-
-
-
