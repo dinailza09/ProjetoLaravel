@@ -11,22 +11,22 @@
     @endforeach
 </ul>
 @endif
-{!! Form::open(['url'=>"produtos/$produto->id/update", 'method'=>'put']) !!}
+{!! Form::open(['route' => ['produtos.update', 'id' => $produtos->id], 'method' => 'put']) !!}
         <div class="form-group">
         {!! Form::label('nome', 'Nome') !!}
-        {!! Form::text('nome', $produto->nome, ['class'=>'form-control', 'required']) !!}
+        {!! Form::text('nome', $produtos->nome, ['class'=>'form-control', 'required']) !!}
         </div>
         <div class="form-group">
         {!! Form::label('descricao', 'Descrição') !!}
-        {!! Form::text('descricao', $produto->descricao, ['class'=>'form-control', 'required']) !!}
+        {!! Form::text('descricao', $produtos->descricao, ['class'=>'form-control', 'required']) !!}
         </div>
         <div class="form-group">
         {!! Form::label('quantidade', 'Quantidade') !!}
-        {!! Form::text('quantidade', $produto->quantidade, ['class'=>'form-control', 'required']) !!}
+        {!! Form::text('quantidade', $produtos->quantidade, ['class'=>'form-control', 'required']) !!}
         </div>
         <div class="form-group">
         {!! Form::label('valor', 'Preço') !!}
-        {!! Form::text('valor', $produto->valor, ['class'=>'form-control', 'required']) !!}
+        {!! Form::text('valor', $produtos->valor, ['class'=>'form-control', 'required']) !!}
         </div>
 
         <div class="form-group">
