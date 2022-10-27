@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Produto;
+
+use App\Http\Requests\ProdutosRequest;
 use Illuminate\Http\Request;
-use App\Http\Requests\ProdutoRequest;
+use App\Models\Produto;
 
 class ProdutosController extends Controller
 {
@@ -16,22 +17,24 @@ class ProdutosController extends Controller
         return view('produtos.create');
      }
 
-     public function store(ProdutoRequest $request){
-        $novo_produto =  $request->all();
-        Produto::create($novo_produto);
+        public function store(ProdutosRequest $request){
+        $produtos =  $request->all();
+        Produto::create($produtos);
 
         return redirect()->route('produtos');
      }
 
-     public function update(ProdutoRequest $request, $id){
+      public function update(ProdutosRequest $request, $id){
       Produto::find($id)->update($request->all());
       return redirect()->route('produtos');   }
+
 
      public function destroy($id){
      Produto::find($id)->delete();
      return redirect()->route('produtos');   }
 
-      public function edit($id){
-      $produto = Produto::find($id);
-      return view('produtos.edit', compact ('produto'));   }
+     
+      public function edit($id){  
+      $produtos = Produto::find($id);
+      return view('produtos.edit', compact ('produtos'));   }
 }
