@@ -23,19 +23,14 @@ Route::post('/clientes/store', [App\Http\Controllers\ClientesController::class, 
 });
 
 
-Route::group(['middleware'=>'auth'],function(){
-    Route::get('/produtos', [App\Http\Controllers\ProdutosController::class, 'index']);
-    
-    Route::get('/produtos/create', [App\Http\Controllers\ProdutosController::class, 'create']);
-    
-    Route::post('/produtos/store', [App\Http\Controllers\ProdutosController::class, 'store']);
-    
-    Route::put('produtos/{id}/update', [App\Http\Controllers\ProdutosController::class, 'update']);
-    
-    Route::get('produtos/edit/{id}', [App\Http\Controllers\ProdutosController::class, 'edit']);
-    
-    Route::get('produtos/destroy/{id}', [App\Http\Controllers\ProdutosController::class, 'destroy']);
-    });
+Route::group(['middleware'=>'auth','prefix' => 'produtos', 'where' => ['id' => '[0-9]+']], function () {
+    Route::get('', ['as' => 'produtos', 'uses' => '\App\Http\Controllers\ProdutosController@index']);
+    Route::get('create', ['as' => 'produtos.create', 'uses' => '\App\Http\Controllers\ProdutosController@create']);
+    Route::get('{id}/destroy', ['as' => 'produtos.destroy', 'uses' => '\App\Http\Controllers\ProdutosController@destroy']);
+    Route::get('{id}/edit', ['as' => 'produtos.edit', 'uses' => '\App\Http\Controllers\ProdutosController@edit']);
+    Route::put('{id}/update', ['as' => 'produtos.update', 'uses' => '\App\Http\Controllers\ProdutosController@update']);
+    Route::post('store', ['as' => 'produtos.store', 'uses' => '\App\Http\Controllers\ProdutosController@store']);
+});
     
     
     Route::get('/', function () {
